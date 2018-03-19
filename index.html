@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="css/css.css">
+    <title>Ironhack Demos - CSS Positioning Basic Concepts</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="clearfix">
+            <div class="left bordered-box"> Hi there! I'm the header, I have
+                <strong>fixed</strong> positioning in the
+                <strong>viewport</strong>. </div>
+            <div class="right "> 
+                <ul class="bordered-box list-inline">
+                    <li class="static"><a href="#static">Static</a></li>
+                    <li class="relative"><a href="#relative">Relative</a></li>
+                    <li class="absolute"><a href="#absolute">Absolute</a></li>
+                    <li class="absolute-bis"><a href="#absolute-bis">Absolute Bis</a></li>
+                    <li class="float"><a href="#float">Floats</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="fixed-item"> I'm a fixed item!
+            <div class="icon-wrapper">
+                <i class="fas fa-plus-circle"></i>
+            </div>
+        </div>
+        <section id="static">
+            <div class="box static bordered-box">
+                <p> I'm <strong>static</strong>! </p>
+                <p> Static is the default behaviour, means no-positioning applied, just a block... </p>
+            </div>
+            <div class="box static bordered-box">
+                <p> Try to apply some CSS positioning properties... The will not work!</p>
+                <div class="bordered-box h-50 mt-40">
+                    <p> Another static container inside a static container, very standard behaviour... </p>
+                </div>
+                <div class="bordered-box h-50 mt-40">
+                    <p> Another static container inside a static container, very standard behaviour... </p>
+                </div>
+            </div>
+        </section>
+        <section id="relative">
+            <div class="box relative bordered-box">
+                <p> I'm a <strong>relative</strong> positioned box! </p>
+                <p> Relative is the "normal" behaviour,
+                    <strong>similar to static</strong>, but
+                    <strong>accepts some CSS positioning properties</strong>: top, left, right, and bottom. </p>
+            </div>
+            <div class="box relative bordered-box t-30 l-30">
+                <div class="bold">I'm
+                    <pre class="d-inline-block">top: 30px; left: 30px;</pre> </div>
+                <div class="relative bordered-box h-50 mt-40 r-50"> Another relative container with
+                    <pre class="d-inline-block">right: 50px;</pre> inside a relative container. </div>
+                <div class="relative bordered-box h-50 mt-40 r-m-50"> Another relative container with
+                    <pre class="d-inline-block">right: -50px;</pre> inside a relative container. </div>
+            </div>
+        </section>
+        <section id="absolute">
+            <div class="tip">I'm absolute in a relative section!</div>
+            <p><strong>absolute</strong> positioning: we aware,  can be extremely unstable</p>
+            <p><strong>absolute</strong> positioned items do not compute in space, are 'invisible' to other elements</p>
+            <h3 class="uppercase center">
+                <span class="bold danger">DO NOT:</span> main layout purposes, like columns
+                <i class="fas fa-exclamation-triangle"></i>
+            </h3>
+            <div class="box absolute bordered-box t-200 l-30 col-45"> Absolute positioned and unstable box. My position boundaries are the first relative positioned container.
+                <div>
+                    <pre>position: absolute;<br>left: 30px;<br>top: 200px;<br>width: 45%;</pre>
+                </div>
+            </div>
+            <div class="box absolute bordered-box t-200 r-30 col-45"> Absolute positioned and unstable box. My position boundaries are the first relative positioned container
+                <div>
+                    <pre>position: absolute;<br>right: 30px;<br>top: 200px;<br>width: 45%;</pre> 
+                </div>
+                <div class="absolute b-20 bordered-box">I'm an absolute div inside an absolute div. <pre>position: absolute;<br>bottom: 20px;</pre></div>
+            </div>
+            <!-- WHAT HAPPEN IF WE WANT TO ADD A NEW DIV UNDER THE ABSOLUTE COLUMNS? -->
+            <!-- <div class="relative bordered-box h-50 mt-40 r-m-50"> Another relative container with
+                    <pre class="d-inline-block">right: -50px;</pre> inside a relative container. </div> -->
+        </section>
+        <section id="absolute-bis">
+            <div class="tip">I'm a relative positioned section, so I can contain absolute elements. If I'm not, the
+                <code>body</code> would be the next boundary</div>
+            <h2>Welcome to the absolute positioning</h2>
+            <p class="bold">We aware, can be extremely unstable</p>
+            <h3 class="uppercase center">
+                <span class="bold success">DO:</span> position items in a 'controlled' parent container
+                <i class="fas fa-exclamation-triangle"></i>
+            </h3>
+            <div class="box relative bordered-box">
+                <p> I'm a <strong>relative</strong> super stable relative parent! </p>
+                <div class="absolute b-20 bordered-box l-20">Absolute div <pre>position: absolute;<br>bottom: 20px;<br>left: 20px;</pre></div>
+                <div class="absolute b-20 r-20 bordered-box">Absolute div <pre>position: absolute;<br>bottom: 20px;<br>right: 20px;</pre></div>
+                <div class="absolute t-20 r-20 bordered-box">Absolute div <pre>position: absolute;<br>top: 20px;<br>right: 20px;</pre></div>
+                <div class="absolute t-middle l-middle circle"></div>
+            </div>
+        </section>
+        <section id="float">
+            <h2>Using floats!</h2>
+            <p class="bold">Remember:</p>
+            <ul>
+                <li>Clear the floats</li>
+                <li>Set a width for the floating items</li>
+                <li>Think about responsive: % width percentages %</li>
+                <li>Contain the floating items in a parent wrraper</li>
+            </ul>
+            <div class="box relative bordered-box column-wrapper">
+                <div>
+                    I'm a <strong>column wrapper</strong>. I have a <pre class="d-inline">clear: both;</pre> just 'after' me.
+                </div>
+                <div class="left col-6 bordered-box pad-t-20 mt-20 mlr-10">Hi, I'm 50% | 1/2 | 6/12 column</div>
+                <div class="left col-6 bordered-box pad-t-20 mt-20 mlr-10">Hi, I'm 50% | 1/2 | 6/12 column</div>
+            </div>
+            <div class="box relative bordered-box column-wrapper">
+                <div>
+                    I'm a <strong>column wrapper</strong>. I have a <pre class="d-inline">clear: both;</pre> just 'after' me.
+                </div>
+                <div class="left col-4 bordered-box pad-t-20 mt-20 mlr-10">Hi, I'm 33% | 1/3 | 4/12 column</div>
+                <div class="left col-4 bordered-box pad-t-20 mt-20 mlr-10">Hi, I'm 33% | 1/3 | 4/12 column</div>
+                <div class="left col-4 bordered-box pad-t-20 mt-20 mlr-10">Hi, I'm 33% | 1/3 | 4/12 column</div>
+            </div>
+        </section>
+        <section id="bonus">
+            <h2>Extra Bonus</h2>
+            <p class="bold">Adding content to the DOM only with CSS | :before and :after pseudo-selectors</p>
+            <div><small>Take a look a the <i class="fas fa-rocket"></i> and the Ironhack logo <img src="img/ironhack.png" alt="Ironhack logo" width="50" height="50" class="v-align-m"> in each section. They DO NOT exist in the HTML, they just render in the browser when the stylesheet is loaded. Isn't it cool?</small></div>
+            <div class="box relative bordered-box column-wrapper">
+                <div class="sticker sticker-js left col-6 bordered-box pad-t-20 mt-20 mlr-10"></div>
+                <div class="sticker sticker-github left col-6 bordered-box pad-t-20 mt-20 mlr-10"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

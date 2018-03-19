@@ -1,0 +1,178 @@
+.col {
+    &-4 {
+        width: 33.33%!important;
+    }
+    &-45 {
+        width: 45% !important;
+    }
+    &-5 {
+        width: 40% !important;
+    }
+    &-6 {
+        width: 50% !important;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix,.column-wrapper {
+    &:after {
+        content: '';
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.bordered-box {
+    @extend %bordered-box;
+}
+
+.v-align-m {
+    vertical-align: middle;
+}
+.h {
+    &-50 {
+        height: 50px;
+    }
+}
+
+.pad {
+    &-t{
+        &-20 {
+            padding-top: 20px;
+        }
+    }
+    &-lr {
+        &-10 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.m {
+    &t {
+        &-20 {
+            margin-top: 20px;
+        }
+        &-50 {
+            margin-top: 50px;
+        }
+        &-40 {
+            margin-top: 40px;
+        }
+    }
+    &l {
+        &-30 {
+            margin-left: 30px;
+        }
+    }
+    &lr {
+        &-10 {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.t {
+    &-middle {
+        top:50%;
+    }
+    &-0 {
+        top: 0;
+    }
+    &-20 {
+        top: 20px;
+    }
+    &-30 {
+        top: 30px;
+    }
+    &-100 {
+        top: 100px;
+    }
+    &-200 {
+        top: 200px;
+    }
+}
+
+.b {
+    &-0 {
+        bottom: 0;
+    }
+    &-20 {
+        bottom: 20px;
+    }
+    &-30 {
+        bottom: 30px;
+    }
+}
+
+.l {
+    &-0 {
+        left: 0;
+    }
+    &-30 {
+        left: 30px;
+    }
+    &-20 {
+        left: 20px;
+    }
+    &-middle {
+        left: 50%;
+    }
+}
+
+.r {
+    &-30 {
+        right: 30px;
+    }
+    &-50 {
+        right: 50px;
+    }
+    &-m {
+        &-50 {
+            right: -50px;
+        }
+    }
+    &-20 {
+        right: 20px;
+    }
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.danger,.success {
+    background: red;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.success {
+    background: green;
+}

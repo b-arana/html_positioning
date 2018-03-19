@@ -1,0 +1,27 @@
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+div,
+header,
+section {
+    box-sizing: border-box;
+}
+
+pre,code {
+    color: $code;
+}
+header {
+    background: $cyan;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    padding: 18px 30px 0;
+    z-index: 9;
+}

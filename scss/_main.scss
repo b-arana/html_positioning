@@ -1,0 +1,203 @@
+.fixed-item {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    text-align: center;
+    height: 100px;
+    background: $grey;
+    border: 1px solid $grey;
+    border-radius: 50%;
+    font-size: .8em;
+    padding-top: 20px;
+    cursor: pointer;
+    @include transition(all .3s ease-in-out);
+    z-index: 9;
+    &:hover {
+        background: white;
+        color: $grey;
+    }
+    .icon-wrapper {
+        font-size: 2em;
+    }
+}
+
+.list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    li {
+        display: inline-block;
+        padding: 4px 14px;
+    }
+}
+
+.tip {
+    background: $orange;
+    border: 1px solid $cyan;
+    border-radius: 8px;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    font-size: .75em;
+    width: 250px;
+    padding: 20px;
+    transform: rotate(20deg);
+    font-weight: 700;
+}
+
+#header {
+    small {
+        font-size: 70%;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        li {
+            padding: 4px 14px;
+            &.static {
+                background: $green
+            }
+            &.relative {
+                background: $orange
+            }
+            &.absolute {
+                background: $blue
+            }
+            &.absolute-bis {
+                background: lighten($blue, 10%)
+            }
+            &.float {
+                background: $cyan
+            }
+            a {
+                color: white;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+section {
+    position: relative;
+    &:before {
+        content: '\f135';
+        font-family: fontawesome;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        background: url(../img/ironhack.png);
+        background-size: contain;
+        height: 80px;
+        width: 80px;
+        background-repeat: no-repeat;
+    }
+    min-height: 100vh;
+    padding: 70px 20px 20px;
+    .box {
+        width: 80%;
+        height: 40vh;
+        min-height: 260px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    &#static {
+        background: $green;
+        .static {
+            background: darken($green, 20%);
+        }
+    }
+    &#relative {
+        background: $orange;
+        color: $black;
+        .relative {
+            position: relative;
+            background: darken($orange, 5%);
+        }
+    }
+    &#absolute,
+    &#absolute-bis {
+        position: relative;
+        background: $blue;
+        .absolute {
+            position: absolute;
+        }
+    }
+    &#absolute-bis {
+        background: lighten($blue, 10%);
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            background: darken($blue, 10%);
+            &.circle {
+                height: 120px;
+                width: 120px;
+                background: $green;
+                margin: -60px 0 0 -60px;
+                border-radius: 50%;
+            }
+        }
+    }
+    &#float {
+        background: darken($cyan, 20%);
+        .col-6,
+        .col-4 {
+            width: calc(50% - 20px) !important;
+            min-height: 80%;
+        }
+        .col-4 {
+            width: calc(33.33% - 20px) !important;
+        }
+    }
+    &#bonus {
+        background: darken($code, 25%);
+        .col-6,
+        .col-4 {
+            width: calc(50% - 20px) !important;
+            min-height: 80%;
+        }
+        .col-4 {
+            width: calc(33.33% - 20px) !important;
+        }
+        .sticker {
+            position: relative;
+            &:before,
+            &:after {
+                font-family: fontawesome;
+                position: absolute;
+                font-size: 4em;
+                background: $black;
+                border-radius: 50%;
+                height: 100px;
+                width: 100px;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 100px;
+            }
+            &.sticker-js {
+                &:after {
+                    content: '\f126';
+                    bottom: 20px;
+                    left: 20px;
+                }
+            }
+            &.sticker-github {
+                &:after {
+                    content: '\f09b';
+                    top: 20px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,298 @@
+/* sass --watch scss/css.scss:css/css.css */
+.bordered-box {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 4px 10px; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 300; }
+
+div,
+header,
+section {
+  box-sizing: border-box; }
+
+pre, code {
+  color: #e4572e; }
+
+header {
+  background: #669bbc;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  padding: 18px 30px 0;
+  z-index: 9; }
+
+.fixed-item {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  text-align: center;
+  height: 100px;
+  background: #898989;
+  border: 1px solid #898989;
+  border-radius: 50%;
+  font-size: .8em;
+  padding-top: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 9; }
+  .fixed-item:hover {
+    background: white;
+    color: #898989; }
+  .fixed-item .icon-wrapper {
+    font-size: 2em; }
+
+.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+  .list-inline li {
+    display: inline-block;
+    padding: 4px 14px; }
+
+.tip {
+  background: #f3a712;
+  border: 1px solid #669bbc;
+  border-radius: 8px;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  font-size: .75em;
+  width: 250px;
+  padding: 20px;
+  transform: rotate(20deg);
+  font-weight: 700; }
+
+#header small {
+  font-size: 70%; }
+#header ul {
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+  #header ul li {
+    padding: 4px 14px; }
+    #header ul li.static {
+      background: #a8c686; }
+    #header ul li.relative {
+      background: #f3a712; }
+    #header ul li.absolute {
+      background: #29335c; }
+    #header ul li.absolute-bis {
+      background: #39477f; }
+    #header ul li.float {
+      background: #669bbc; }
+    #header ul li a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none; }
+
+section {
+  position: relative;
+  min-height: 100vh;
+  padding: 70px 20px 20px; }
+  section:before {
+    content: '\f135';
+    font-family: fontawesome;
+    position: absolute;
+    bottom: 20px;
+    left: 20px; }
+  section:after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    background: url(../img/ironhack.png);
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+    background-repeat: no-repeat; }
+  section .box {
+    width: 80%;
+    height: 40vh;
+    min-height: 260px;
+    margin: 20px auto;
+    padding: 20px; }
+  section#static {
+    background: #a8c686; }
+    section#static .static {
+      background: #769c4a; }
+  section#relative {
+    background: #f3a712;
+    color: #2b2b2b; }
+    section#relative .relative {
+      position: relative;
+      background: #e0980b; }
+  section#absolute, section#absolute-bis {
+    position: relative;
+    background: #29335c; }
+    section#absolute .absolute, section#absolute-bis .absolute {
+      position: absolute; }
+  section#absolute-bis {
+    background: #39477f; }
+    section#absolute-bis .relative {
+      position: relative; }
+    section#absolute-bis .absolute {
+      background: #191f39; }
+      section#absolute-bis .absolute.circle {
+        height: 120px;
+        width: 120px;
+        background: #a8c686;
+        margin: -60px 0 0 -60px;
+        border-radius: 50%; }
+  section#float {
+    background: #396783; }
+    section#float .col-6,
+    section#float .col-4 {
+      width: calc(50% - 20px) !important;
+      min-height: 80%; }
+    section#float .col-4 {
+      width: calc(33.33% - 20px) !important; }
+  section#bonus {
+    background: #822a11; }
+    section#bonus .col-6,
+    section#bonus .col-4 {
+      width: calc(50% - 20px) !important;
+      min-height: 80%; }
+    section#bonus .col-4 {
+      width: calc(33.33% - 20px) !important; }
+    section#bonus .sticker {
+      position: relative; }
+      section#bonus .sticker:before, section#bonus .sticker:after {
+        font-family: fontawesome;
+        position: absolute;
+        font-size: 4em;
+        background: #2b2b2b;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100px; }
+      section#bonus .sticker.sticker-js:after {
+        content: '\f126';
+        bottom: 20px;
+        left: 20px; }
+      section#bonus .sticker.sticker-github:after {
+        content: '\f09b';
+        top: 20px;
+        right: 20px; }
+
+.col-4 {
+  width: 33.33% !important; }
+.col-45 {
+  width: 45% !important; }
+.col-5 {
+  width: 40% !important; }
+.col-6 {
+  width: 50% !important; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.clearfix:after, .column-wrapper:after {
+  content: '';
+  display: block;
+  visibility: hidden;
+  clear: both; }
+
+.center {
+  text-align: center; }
+
+.d-inline-block {
+  display: inline-block; }
+
+.d-inline {
+  display: inline; }
+
+.v-align-m {
+  vertical-align: middle; }
+
+.h-50 {
+  height: 50px; }
+
+.pad-t-20 {
+  padding-top: 20px; }
+.pad-lr-10 {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.mt-20 {
+  margin-top: 20px; }
+.mt-50 {
+  margin-top: 50px; }
+.mt-40 {
+  margin-top: 40px; }
+.ml-30 {
+  margin-left: 30px; }
+.mlr-10 {
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.t-middle {
+  top: 50%; }
+.t-0 {
+  top: 0; }
+.t-20 {
+  top: 20px; }
+.t-30 {
+  top: 30px; }
+.t-100 {
+  top: 100px; }
+.t-200 {
+  top: 200px; }
+
+.b-0 {
+  bottom: 0; }
+.b-20 {
+  bottom: 20px; }
+.b-30 {
+  bottom: 30px; }
+
+.l-0 {
+  left: 0; }
+.l-30 {
+  left: 30px; }
+.l-20 {
+  left: 20px; }
+.l-middle {
+  left: 50%; }
+
+.r-30 {
+  right: 30px; }
+.r-50 {
+  right: 50px; }
+.r-m-50 {
+  right: -50px; }
+.r-20 {
+  right: 20px; }
+
+.bold {
+  font-weight: 700; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.danger, .success {
+  background: red;
+  padding: 3px 5px;
+  border-radius: 4px; }
+
+.success {
+  background: green; }
+
+/*# sourceMappingURL=css.css.map */
