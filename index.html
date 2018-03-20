@@ -14,8 +14,8 @@
 <body>
     <header id="header">
         <div class="clearfix">
-            <div class="left bordered-box"> Hi there! I'm the header, I have
-                <strong>fixed</strong> positioning in the
+            <div class="left bordered-box"> Hi there! I'm the header, I'm
+            <strong>fixed</strong> in the
                 <strong>viewport</strong>. </div>
             <div class="right "> 
                 <ul class="bordered-box list-inline">
@@ -66,6 +66,7 @@
             </div>
         </section>
         <section id="absolute">
+            <h2>Welcome to the absolute positioning</h2>
             <div class="tip">I'm absolute in a relative section!</div>
             <p><strong>absolute</strong> positioning: we aware,  can be extremely unstable</p>
             <p><strong>absolute</strong> positioned items do not compute in space, are 'invisible' to other elements</p>
@@ -73,36 +74,36 @@
                 <span class="bold danger">DO NOT:</span> main layout purposes, like columns
                 <i class="fas fa-exclamation-triangle"></i>
             </h3>
-            <div class="box absolute bordered-box t-200 l-30 col-45"> Absolute positioned and unstable box. My position boundaries are the first relative positioned container.
+            <div class="box absolute bordered-box t-270 l-30 col-45"> Absolute positioned and unstable box. My position boundaries are the first relative positioned container.
                 <div>
                     <pre>position: absolute;<br>left: 30px;<br>top: 200px;<br>width: 45%;</pre>
                 </div>
             </div>
-            <div class="box absolute bordered-box t-200 r-30 col-45"> Absolute positioned and unstable box. My position boundaries are the first relative positioned container
+            <div class="box absolute bordered-box t-270 r-30 col-45"> Absolute positioned and unstable box. My position boundaries are the first relative positioned container
                 <div>
                     <pre>position: absolute;<br>right: 30px;<br>top: 200px;<br>width: 45%;</pre> 
                 </div>
                 <div class="absolute b-20 bordered-box">I'm an absolute div inside an absolute div. <pre>position: absolute;<br>bottom: 20px;</pre></div>
             </div>
-            <!-- WHAT HAPPEN IF WE WANT TO ADD A NEW DIV UNDER THE ABSOLUTE COLUMNS? -->
-            <!-- <div class="relative bordered-box h-50 mt-40 r-m-50"> Another relative container with
+            <!-- WHAT HAPPENS IF WE WANT TO ADD A NEW DIV UNDER THE ABSOLUTE COLUMNS? -->
+            <!-- <div class="absolute bordered-box h-250 mt-40"> Another relative container with
                     <pre class="d-inline-block">right: -50px;</pre> inside a relative container. </div> -->
         </section>
         <section id="absolute-bis">
             <div class="tip">I'm a relative positioned section, so I can contain absolute elements. If I'm not, the
-                <code>body</code> would be the next boundary</div>
-            <h2>Welcome to the absolute positioning</h2>
-            <p class="bold">We aware, can be extremely unstable</p>
+                <code>body</code> would be the next boundary</div>            
+            <p><strong>absolute</strong> positioning: we aware,  can be extremely unstable</p>
+            <p><strong>absolute</strong> positioned items do not compute in space, are 'invisible' to other elements</p>
             <h3 class="uppercase center">
                 <span class="bold success">DO:</span> position items in a 'controlled' parent container
                 <i class="fas fa-exclamation-triangle"></i>
             </h3>
-            <div class="box relative bordered-box">
+            <div class="box relative bordered-box mt-50">
                 <p> I'm a <strong>relative</strong> super stable relative parent! </p>
                 <div class="absolute b-20 bordered-box l-20">Absolute div <pre>position: absolute;<br>bottom: 20px;<br>left: 20px;</pre></div>
                 <div class="absolute b-20 r-20 bordered-box">Absolute div <pre>position: absolute;<br>bottom: 20px;<br>right: 20px;</pre></div>
                 <div class="absolute t-20 r-20 bordered-box">Absolute div <pre>position: absolute;<br>top: 20px;<br>right: 20px;</pre></div>
-                <div class="absolute t-middle l-middle circle"></div>
+                <div class="absolute t-middle l-middle circle"><!-- https://css-tricks.com/centering-percentage-widthheight-elements/ --></div>
             </div>
         </section>
         <section id="float">
@@ -112,7 +113,7 @@
                 <li>Clear the floats</li>
                 <li>Set a width for the floating items</li>
                 <li>Think about responsive: % width percentages %</li>
-                <li>Contain the floating items in a parent wrraper</li>
+                <li>Contain the floating items in a parent wrapper</li>
             </ul>
             <div class="box relative bordered-box column-wrapper">
                 <div>
@@ -133,7 +134,7 @@
         <section id="bonus">
             <h2>Extra Bonus</h2>
             <p class="bold">Adding content to the DOM only with CSS | :before and :after pseudo-selectors</p>
-            <div><small>Take a look a the <i class="fas fa-rocket"></i> and the Ironhack logo <img src="img/ironhack.png" alt="Ironhack logo" width="50" height="50" class="v-align-m"> in each section. They DO NOT exist in the HTML, they just render in the browser when the stylesheet is loaded. Isn't it cool?</small></div>
+            <div><small>Take a look at the <i class="fas fa-rocket"></i> and the Ironhack logo <img src="img/ironhack.png" alt="Ironhack logo" width="50" height="50" class="v-align-m"> in each section. They DO NOT exist in the HTML, they just render in the browser when the stylesheet is loaded. Isn't it cool?</small></div>
             <div class="box relative bordered-box column-wrapper">
                 <div class="sticker sticker-js left col-6 bordered-box pad-t-20 mt-20 mlr-10"></div>
                 <div class="sticker sticker-github left col-6 bordered-box pad-t-20 mt-20 mlr-10"></div>

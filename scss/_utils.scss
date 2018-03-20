@@ -53,6 +53,9 @@
     &-50 {
         height: 50px;
     }
+    &-250 {
+        height: 250px;
+    }
 }
 
 .pad {
@@ -75,7 +78,7 @@
             margin-top: 20px;
         }
         &-50 {
-            margin-top: 50px;
+            margin-top: 50px!important;
         }
         &-40 {
             margin-top: 40px;
@@ -112,6 +115,9 @@
     }
     &-200 {
         top: 200px;
+    }
+    &-270 {
+        top: 270px;
     }
 }
 
