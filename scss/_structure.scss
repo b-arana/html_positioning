@@ -1,0 +1,22 @@
+.container {
+    max-width: 980px;
+    width: 100%;
+}
+.inline li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+section {
+    .full-height {
+        min-height: 100vh;
+    }
+    #hero {
+        h1 {
+            font-size: 12vw;
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+}

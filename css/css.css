@@ -189,6 +189,21 @@ section {
         top: 20px;
         right: 20px; }
 
+.container {
+  max-width: 980px;
+  width: 100%; }
+
+.inline li {
+  display: inline-block;
+  margin: 0 5px; }
+
+section .full-height {
+  min-height: 100vh; }
+section #hero h1 {
+  font-size: 12vw; }
+  section #hero h1 span {
+    font-size: 1rem; }
+
 .col-4 {
   width: 33.33% !important; }
 .col-45 {
